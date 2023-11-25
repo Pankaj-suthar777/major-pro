@@ -1,0 +1,62 @@
+<% layout('/layouts/boilerplate') -%>
+
+<div class="row mt-3">
+    <div class="col-10 col-sm-8 col-md-8  offset-1 offset-sm-2 ">
+    
+    <h2>Create a new listing</h2>
+    <form method="post" action="/listing" enctype="multipart/form-data">
+        <div class="mb-3"> 
+            <label for="title" class="form-label">Title</label>
+            <input type="text" placeholder="enter title" name="title" class="form-control">
+            <div class="invalid-feedback">Wrong</div>
+        </div>
+             <label for="description" class="form-label">Description</label>
+             <textarea name="description" class="form-control" required></textarea>
+        <div class="mb-3">
+            <label for="img" class="form-label">Uoload Listing Image</label>
+            <input type="file" name="image" class="form-control" required>
+       </div>
+       <div class="row">
+             
+             
+        <div class="mb-3 col-md-4">
+            <label for="title" class="form-label">Price</label>
+            <input name="price" placeholder="enter price" class="form-control" required>
+       </div>
+            
+       <div class="mb-3 col-md-8">
+            <label for="title" class="form-label">Country</label>
+            <input type="text" name="country" placeholder="enter country" class="form-control" required>
+       
+       </div>
+    </div>
+ <div class="row">
+       <div class="mb-4 col">
+            <label for="title" class="form-label">Location</label>
+            <input type="text" name="location" placeholder="enter location" class="form-control" required>
+           
+       </div>
+
+       <div class="mb-4 col">
+       <label for="select" class="form-label">Category</label>
+       <select class="form-select" id="select" style="height: 40px;" name="category">
+        <option selected>select</option>
+         <option value="Mountain">Mountain</option>
+         <option value="Farm">Farm</option>
+         <option value='IconicCity'>Iconic-city</option>
+         <option value='Castels'>Castels</option>
+         <option value='AwsomePools'>Awsome-pools</option>
+         <option value='Rooms'>Rooms</option>
+         <option value='Camping'>Camping</option>
+         <option value='Arctic'>Arctic</option>
+         <option value='Dome'>Dome</option>
+         <option value='Boats'>Boats</option>
+      </select>
+    </div>
+    </div>
+        
+        <button class="btn btn-dark r-btn mb-3">Add</button>
+        
+    </form>
+</div>
+</div>

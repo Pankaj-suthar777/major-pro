@@ -1,0 +1,34 @@
+<% layout('/layouts/boilerplate') -%>
+
+
+<body>
+    
+
+    <div class="row row-cols-lg-3 row-cols-md-2 row-cols-sm-2 row-cols-2 mt-3 card-list">
+
+        <% if(searchList != undefined){ %>
+            <a href="/listing/<%=searchResult._id%>" style="text-decoration: none;">
+            <div class="card col listing-card" >
+                <img src="<%=searchResult.image.url%>" class="card-img-top" alt="img" style="height: 20rem;">
+                <div class="card-img-overlay"></div>
+                <div class="card-body">
+                  <span class="card-text" style="font-size: 1rem; font-weight: 500;"><%=searchResult.title%></span><br>
+                  <span class="card-text" style="font-size: 0.9rem;">
+                    &#8377; <%=searchResult.price.toLocaleString('en-IN')%> / night <i class="tax-info">&nbsp;&nbsp; +18% GST</i></span>
+                    <p><%=searchResult.location%>
+                    <br><%=searchResult.country%></p>
+                   
+                </div>
+              </div>
+            </a>
+            <% } %>
+            <% if(searchList == undefined){ %>
+                <div class="search">
+             <h3>No result found</h3>
+            </div>
+            <% } %>
+    </div>
+    
+</body>
+
+

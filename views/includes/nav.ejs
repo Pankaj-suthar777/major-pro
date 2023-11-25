@@ -1,0 +1,104 @@
+<nav class="navbar navbar-expand bg-body-tertiary border-bottom sticky-top">
+
+  <div class="search-from-up">
+    <form  class="d-flex" action='/listing/searchListing' method="get">
+   
+      <input class="form-control me-2 search-input" name="search" type="search" placeholder="Search">
+      <button class="btn search-btn" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+    </form>
+  </div>
+
+    <div class="container-fluid">
+      <a class="navbar-brand" href="/listing"><i class="fa-regular fa-compass nav-compass"></i></a>
+      <div class="collapse navbar-collapse bg-body-tertiary" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-link" href="/listing">&nbsp;Explore</a>
+        </div>
+        <div class="search-icon"> 
+          <i class="fa-solid fa-magnifying-glass"></i>&nbsp;  Search
+        </div>
+        <div class="navbar-nav search-form ms-auto">
+        <form  class="d-flex" action='/listing/searchListing' method="get">
+          <input class="form-control me-2 search-input" name="search" type="search" placeholder="Search destination">
+          <button class="btn search-btn" type="submit"><i class="fa-solid fa-magnifying-glass"></i>Search</button>
+        </form>
+      </div>
+        <div class="navbar-nav ms-auto">
+          <a class="nav-link add-home-top-nav" href="/listing/new">Airbnb your home</a>
+          <% if (!currUser) { %>
+          <a class="nav-link signup" href="/signup"><b>Sign up</b></a>
+          <a class="nav-link login" href="/login"><b>Log in</b></a>
+          <% } %>
+          <% if (currUser) { %>
+          <a class="nav-link logout" href="/logout"><b>Log out</b></a>
+          <% } %>
+        </div>
+      </div>
+    </div>
+    <button class="nav-btn">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+   
+  
+  </nav>
+  
+  <div class="option">
+    <div class="cross"><i class="fa-solid fa-xmark"></i></div>
+       <div class="brand">
+           <div class="brand-info">
+            <div>
+           <i class="fa-regular fa-compass nav-brand-icon"></i>
+          </div>
+           <h4 >Wanderlust</h4>
+      </div>
+    </div>
+    <ul class="allLink">
+      <li><a class="nav-link" href="#"><b>Your listings</b></a></li>
+      <li class="nav-brand-name"><a class="nav-link" href="/listing/new">Airbnb your home</a></li>
+    <% if (!currUser) { %>
+      <li><a class="nav-link" href="/signup"><b>Sign up</b></a></li>
+      <li><a class="nav-link" href="/login"><b>Log in</b></a></li>
+    <% } %>
+    <%  if (currUser) { %>
+      <li><a class="nav-link" href="/logout"><b>Log out</b></a></li>
+    <% } %>
+    </ul>
+  </div>
+
+  <script>
+    let btn = document.querySelector('.nav-btn')
+    let nav = document.querySelector('.option')
+    let icon = document.querySelector('.icon')
+  
+    btn.addEventListener('click',()=>{
+    nav.classList.toggle('open')
+    if(nav.classList.contains('open') ){
+      btn.style.visibility = 'hidden' 
+    } else {
+      
+    }
+    })
+
+    let serachUp = document.querySelector('.search-from-up')
+    let searchBtn = document.querySelector('.search-icon')
+    let h = document.querySelector('.bg-search')
+    searchBtn.addEventListener('click',(e)=>{
+    serachUp.classList.toggle('up-down')
+    if(serachUp.classList.contains('up-down')){
+      searchBtn.innerHTML = `<i class="fa-solid fa-xmark"></i> &nbsp;  Close Search`
+      h.style.zIndex = '7'
+  
+    } else {
+      searchBtn.innerHTML = ` <i class="fa-solid fa-magnifying-glass"></i> &nbsp;Search`
+      h.style.zIndex = '-7'
+    }
+    }) 
+    
+
+    let cross = document.querySelector('.cross');
+    cross.addEventListener('click',()=>{
+    nav.classList.toggle('open')
+    btn.style.visibility = 'visible'
+   })
+    
+  </script>

@@ -1,0 +1,13 @@
+.option-review {
+    position: absolute;
+    top:5px;
+    right:10px;
+    font-size:1.1rem;
+    
+}
+.deleteRp {
+    font-size: 0.8rem;
+}
+.btnRoption {
+    font-size: 0.7rem;
+}

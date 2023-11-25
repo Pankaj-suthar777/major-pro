@@ -1,0 +1,9 @@
+.login-page {
+    margin:auto;
+}
+@media (width<500px) {
+    .login-page .form-label {
+        font-size: 0.8rem;
+        
+    }
+}

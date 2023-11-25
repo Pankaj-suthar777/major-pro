@@ -1,0 +1,9 @@
+.signup-page {
+    margin:auto;
+}
+
+@media (width<500px) {
+    .signup-page .form-label {
+        font-size: 0.8rem;
+    }
+}
