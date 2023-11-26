@@ -83,12 +83,12 @@
             <p class="starability-result card-text" data-rating="<%=review.rating%>">
             </p>
             <p class="card-text"> <%=review.comment%></p><br>
-            <!-- <% if(review.author && review.author.equals(currUser)) { %>
+           <% if(review.author && review.author.equals(currUser)) { %>
                 
             <form method="POST" action="/listing/<%=detailOfListing._id%>/reviews/<%=review._id%>?_method=DELETE" class="mb-3">
                 <button class="btn btn-sm btn-dark">Delete</button>
             </form>
-            <% } %> -->
+            <% } 
         </div>
     </div>
     <% } %>
@@ -99,11 +99,11 @@
 </div>
 </div>
 <script>
-    let reviewExist = document.querySelector('.review-one')
+   /* let reviewExist = document.querySelector('.review-one')
 
     let optionReview = document.querySelectorAll('.option-review')
     for ( optionOneReview of optionReview) {
- try {
+
     optionOneReview.addEventListener('click',(e)=>{
         if (e.target.classList.contains('fa-ellipsis-vertical') ) {
      e.target.parentNode.nextElementSibling.innerHTML = ` <div class="option-review" onclick='myF()'><i class="fa-solid fa-xmark"></i></div>
@@ -116,7 +116,7 @@
     }
    }
     )
-} 
+
 
 
 function myF() {
@@ -125,5 +125,5 @@ for( optionCurr of optionCurrr) {
 optionCurr.style.display = 'none'
 }
 }
-
+*/
 </script>
