@@ -94,13 +94,15 @@ app.listen(8080,()=>{
 })
 
 
-//for route that didn't exist
 
-app.all('*',(req,res,next)=> {
-    next( new ExpressError(401,'Page not found'))
-})
 
 app.use((err,req,res,next)=>{
     let { StatusCode=500 , message='Some error occured' } = err;
     res.status(StatusCode).render('error.ejs',{err});
 })
+
+//for route that didn't exist
+app.all('*',(req,res,next)=> {
+    next( new ExpressError(401,'Page not found'))
+})
+
