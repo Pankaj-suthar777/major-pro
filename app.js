@@ -54,10 +54,6 @@ const sessionOption = {
     }
 };
 
-StorageEvent.on('error',(err)=>{
-    console.log('ERROR IN MONGO STORE',err)
-})
-
 
 
 app.use(session(sessionOption));
