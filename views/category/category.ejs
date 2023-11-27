@@ -111,3 +111,34 @@
               <%}%>
     </div>
    </div>
+
+<script>
+let taxBtn = document.querySelector('#flexSwitchCheckDefault');
+      taxBtn.addEventListener('change',()=>{
+       let info = document.querySelectorAll('.tax-info')
+       for( tax of info ){
+       tax.classList.toggle('visible')
+       }
+      })
+      function scrollContainer(distance){
+        const container = document.querySelector('#filters')
+        container.scrollLeft += distance;
+      }
+
+       let left = document.querySelector('.arrow-left');
+       let container = document.querySelector('#filters');
+       container.addEventListener('mouseover',()=>{
+       left.style.display = 'inline-block'
+       })
+       container.addEventListener('mouseout',()=>{
+       left.style.display = 'none'
+       })
+       left.addEventListener('mouseover',()=>{
+       left.style.display = 'inline-block'
+       })
+       if(window.innerWidth < 550) {
+        container.addEventListener('mouseout',()=>{
+       left.style.display = 'inline-block'
+       })
+       }
+</script>
