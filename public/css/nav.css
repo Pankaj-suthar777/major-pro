@@ -177,8 +177,8 @@ padding-left: 10%;
 }
 @media (width<500px){
   .search-from-up {
-    width: 95%;
-    left: 15%;
+    width: 92%;
+    left: 20%;
   }
 }
 .cross {
