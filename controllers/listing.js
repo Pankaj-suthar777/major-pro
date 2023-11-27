@@ -87,8 +87,7 @@ module.exports.searchListing = async (req,res)=>{
     let {search} = req.query;
 
 //    let ssearchResult = await Listing.find({ title : search} )
-let ssearchResult = await Listing.find({$or: [{ title : search},{location :search},{country:search}]} );
-   let searchResult = ssearchResult[0]
+let searchResult = await Listing.find({$or: [{ title : search},{location :search},{country:search}]} );
    res.locals.searchList = searchResult
   res.render('listings/search.ejs',{searchResult})
 }
