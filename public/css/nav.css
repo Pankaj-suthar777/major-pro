@@ -180,6 +180,10 @@ padding-left: 10%;
     width: 92%;
     left: 20%;
   }
+  .search-input{
+    border-radius: 14px;
+    padding: 0 5px 0 5px;
+  }
 }
 .cross {
   position: absolute;
