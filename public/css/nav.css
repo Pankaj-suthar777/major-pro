@@ -174,8 +174,11 @@ padding-left: 10%;
   .option {
     width:85vw;
   }
+}
+@media (width<500px){
   .search-from-up {
-    width : 100%;
+    width : 95%;,
+    left : 0;
   }
 }
 .cross {
