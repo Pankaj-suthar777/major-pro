@@ -178,11 +178,11 @@ padding-left: 10%;
 @media (width<550px){
   .search-from-up {
     width: 92%;
-    left: 20%;
+    left: 17%;
   }
   .search-input{
     border-radius: 14px;
-    padding-right:5px;
+    padding-right:5px !important;
     padding-left:5px;
   }
 }
