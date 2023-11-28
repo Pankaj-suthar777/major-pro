@@ -86,7 +86,7 @@ module.exports.deleteListing = async (req,res)=>{
 module.exports.searchListing = async (req,res)=>{
     let {search} = req.query;
 
-//    let ssearchResult = await Listing.find({ title : search} )
+ let searchedWord = search;
 let searchResult = await Listing.find({$or: [{ title : search},{location :search},{country:search}]} );
    res.locals.searchList = searchResult
   res.render('listings/search.ejs',{searchResult})
