@@ -89,6 +89,6 @@ module.exports.searchListing = async (req,res)=>{
  let searchedWord = search;
 let searchResult = await Listing.find({$or: [{ title : search},{location :search},{country:search}]} );
    res.locals.searchList = searchResult
-  res.render('listings/search.ejs',{searchResult})
+  res.render('listings/search.ejs',{searchResult,searchedWord})
 }
 
