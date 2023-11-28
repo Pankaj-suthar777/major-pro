@@ -177,7 +177,7 @@ padding-left: 10%;
 }
 @media (width<550px){
   .search-from-up {
-    width: 92%;
+    width: 80%;
     left: 17%;
   }
   .search-input{
