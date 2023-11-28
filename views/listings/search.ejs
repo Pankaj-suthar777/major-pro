@@ -6,7 +6,7 @@
 
     <div class="row row-cols-lg-3 row-cols-md-2 row-cols-sm-2 row-cols-2 mt-3 card-list">
      
-        <% if(searchList != undefined){ %>
+        <% if(searchList[0] != undefined){ %>
 <p style='margin : auto; height:35px; width:100%;'> Search result for <%=searchedWord%> </p>
         <% searchResult.map((searchResult)=>{ %>
             <a href="/listing/<%=searchResult._id%>" style="text-decoration: none;">
@@ -25,7 +25,7 @@
             </a>
 <% } )%>
             <% } %>
-            <% if(searchList == undefined){ %>
+            <% if(searchList[0] == undefined){ %>
                 <div class="search">
              <h3>No result found</h3>
             </div>
