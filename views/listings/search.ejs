@@ -2,10 +2,10 @@
 
 
 <body>
-   <%=searchedWord %> 
+   
 
     <div class="row row-cols-lg-3 row-cols-md-2 row-cols-sm-2 row-cols-2 mt-3 card-list">
-
+<%=searchedWord %> 
         <% if(searchList != undefined){ %>
         <% searchResult.map((searchResult)=>{ %>
             <a href="/listing/<%=searchResult._id%>" style="text-decoration: none;">
