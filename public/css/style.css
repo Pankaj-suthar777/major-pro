@@ -300,11 +300,9 @@ body {
 
  @media (width < 550px) {
      #filters {
-          width:90%;
+          width:85%;
         }
-     .arrow-right {
-         right:8%;
-     }
+    
      
   }
  
