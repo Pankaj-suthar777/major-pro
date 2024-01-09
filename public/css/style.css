@@ -313,39 +313,14 @@ body {
      margin-top:10px;
      overflow-x: auto;
      position: relative;
-     width:65%;
+     width:95%;
      white-space: nowrap;
      scroll-behavior: smooth;
    }
 
 
-.arrow-btn {
-    z-index: 9;
-    position: absolute;
-    top: 10px;
-    height: 30px;
-    width:30px;
-    border-radius: 50%;
-    border: 1px solid grey;
-    cursor: pointer;
-    opacity: 0.7;
-}
-.arrow-left {
-    left:10px;
-    display: none;
-}
 
-.arrow-right {
-    right:33%;
-    display: none;
-}
- .arrow-right:hover {
-    display: inline-block; 
-}
- 
- #filters:hover + .arrow-right  {
-   display:inline-block;
-}
+
 
 .option-long {
     position: absolute;
@@ -370,16 +345,7 @@ body {
 }
 
 @media (width < 550px) {
-    .arrow-left,.arrow-right{
-     display: inline-block;
-     opacity: 0.5;
-    }
-    .arrow-left {
-        left:10px;
-    }
-    .arrow-right{
-        right:31%;
-       }
+ 
        .filter p {
         font-size : 0.7rem;
        }
